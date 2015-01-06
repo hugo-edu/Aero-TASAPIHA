@@ -28,4 +28,14 @@ public class Quai implements GestionQuai {
     	}
     }
 
+	@Override
+	public String toString() {
+		String toPrint  = "";
+		
+		if(avion != null)
+			toPrint = avion.getModele();
+		
+		return "Quai [avion=" + toPrint + "]";
+	}
+
 }

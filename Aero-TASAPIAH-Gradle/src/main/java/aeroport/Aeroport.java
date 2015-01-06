@@ -1,5 +1,7 @@
 package aeroport;
 
+import java.util.Arrays;
+
 public class Aeroport {
 	
     private String nom;
@@ -82,6 +84,14 @@ public class Aeroport {
 
 	public void setNombreEmployes(int nombreEmployes) {
 		this.nombreEmployes = nombreEmployes;
+	}
+
+	@Override
+	public String toString() {
+		return "Aeroport [nom=" + nom + ", ville=" + ville + ", pays=" + pays
+				+ ", nombreQuais=" + nombreQuais + ", nombreEmployes="
+				+ nombreEmployes + ", quais=" + Arrays.toString(quais)
+				+ ", employes=" + Arrays.toString(employes) + "]";
 	}
 
 }

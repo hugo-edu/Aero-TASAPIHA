@@ -1,5 +1,7 @@
 package aeroport;
 
+import java.util.Arrays;
+
 public class Avion implements GestionAvion {
     
     private Aeroport destination;
@@ -70,6 +72,7 @@ public class Avion implements GestionAvion {
     		passagers[nombrePassager] = null;
     		nombrePassager--;
     	}
+    	passagers[0] = null;
     }
 
 	public int getNombrePassager() {
@@ -78,6 +81,14 @@ public class Avion implements GestionAvion {
 
 	public void setNombrePassager(int nombrePassager) {
 		this.nombrePassager = nombrePassager;
+	}
+
+	@Override
+	public String toString() {
+		return "Avion [\n destination=" + destination.getNom() + ", \n marque=" + marque
+				+ ", \n modele=" + modele + ", \n nombrePassagerMax="
+				+ nombrePassagerMax + ", \n nombrePassager=" + nombrePassager
+				+ ", \n passagers=" + Arrays.toString(passagers) + "]";
 	}
 
 }

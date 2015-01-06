@@ -1,5 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'jacoco'
+apply plugin: 'findbugs'
 
 sourceCompatibility = 1.5
 version = '1.0'
@@ -28,4 +30,17 @@ uploadArchives {
            dirs 'repos'
        }
     }
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination "${buildDir}/jacocoHtml"
+    }
+}
+
+findbugs {
+	effort = "max"
+	reportLevel = "low"
 }
