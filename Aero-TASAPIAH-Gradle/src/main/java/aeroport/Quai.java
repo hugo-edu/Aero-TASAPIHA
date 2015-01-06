@@ -5,7 +5,7 @@ public class Quai implements GestionQuai {
     private Avion avion;
 
     public Quai(){
-    	avion = new Avion();
+
     }
     
     public Avion getAvion() {

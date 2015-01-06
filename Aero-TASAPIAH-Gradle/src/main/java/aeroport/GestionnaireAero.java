@@ -25,18 +25,21 @@ public class GestionnaireAero {
         System.out.println("A quel quai accéder?");
         System.out.println(aeroport.getQuais());
         quai = sc.nextInt();
-        System.out.println(aeroport.getQuais()[quai]);
-
-        try{
-            if(avion == null){
-            	aeroport.getQuais()[quai].decollage();
-            }
-            else{
-            	aeroport.getQuais()[quai].atterrissage(avion);
-            }
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());   
+        
+        if(quai >= 0 && quai < aeroport.getNombreQuais()){
+	        System.out.println(aeroport.getQuais()[quai]);
+	
+	        try{
+	            if(avion == null){
+	            	aeroport.getQuais()[quai].decollage();
+	            }
+	            else{
+	            	aeroport.getQuais()[quai].atterrissage(avion);
+	            }
+	        }
+	        catch(Exception e){
+	            System.out.println(e.getMessage());   
+	        }
         }
     }
 }
