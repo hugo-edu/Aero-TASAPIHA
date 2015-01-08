@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>GestionnaireAero.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Aero-TASAPIHA-Gradle</a> &gt; <a href="index.source.html" class="el_package">aeroport</a> &gt; <span class="el_source">GestionnaireAero.java</span></div><h1>GestionnaireAero.java</h1><pre class="source lang-java linenums">package aeroport;
+
+import java.util.Scanner;
+
+public class GestionnaireAero {
+
+    private Aeroport aeroport;
+    private Scanner sc;
+
+<span class="nc" id="L10">    public GestionnaireAero(Aeroport aeroport) {</span>
+<span class="nc" id="L11">        this.aeroport = aeroport;</span>
+<span class="nc" id="L12">        this.sc = new Scanner(System.in);</span>
+<span class="nc" id="L13">    }</span>
+
+    public Aeroport getAeroport() {
+<span class="nc" id="L16">        return this.aeroport;</span>
+    }
+
+    public void setAeroport(Aeroport aeroport) {
+<span class="nc" id="L20">        this.aeroport = aeroport;</span>
+<span class="nc" id="L21">    }</span>
+
+    public void embarquement(Avion avion, Passager[] passagers) {
+<span class="nc bnc" id="L24" title="All 2 branches missed.">        for (Passager a : passagers) {</span>
+<span class="nc" id="L25">            avion.embarquer(a);</span>
+        }
+
+<span class="nc" id="L28">    }</span>
+
+    public void etat_Avion(Quai quai, Avion avion) {
+    	int reponse;
+<span class="nc bnc" id="L32" title="All 2 branches missed.">    	if(avion != null){</span>
+<span class="nc" id="L33">	        System.out.println(&quot;L'avion &quot; + avion.getModele() + &quot;: nombre de passagers &quot; + avion.getNombrePassager());</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">	        for(Passager a:avion.getPassagers()){</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">	        	if(a != null){</span>
+<span class="nc" id="L36">	        		System.out.println(&quot;\n&quot;+a.toString());</span>
+	        	}
+	        }
+	        
+<span class="nc" id="L40">	        System.out.println(&quot;1: Faire decoller l'avion 2: Embarquer 3:Debarquer 4: Quitter&quot;);</span>
+<span class="nc" id="L41">	        reponse = sc.nextInt();</span>
+	        
+<span class="nc bnc" id="L43" title="All 4 branches missed.">	        switch(reponse){</span>
+<span class="nc" id="L44">	        	case 1: modification_quai(quai, null);</span>
+<span class="nc" id="L45">	        		break;</span>
+	        	case 2: 
+<span class="nc" id="L47">	        		Passager[] p = new Passager[1];</span>
+<span class="nc" id="L48">	        		p[0] = new Passager(&quot;Jean&quot;,&quot;Hubert&quot;,50);</span>
+<span class="nc" id="L49">	        		embarquement(avion, p);</span>
+<span class="nc" id="L50">	        		break;</span>
+<span class="nc" id="L51">	        	case 3: debarquement(avion);</span>
+<span class="nc" id="L52">	        			break;</span>
+	        }
+	        
+    	}
+    	else{
+<span class="nc" id="L57">    		System.out.println(&quot;1: Stocker un avion 2: Quitter&quot;);</span>
+<span class="nc" id="L58">    		reponse = sc.nextInt();</span>
+    		
+<span class="nc bnc" id="L60" title="All 2 branches missed.">    		if(reponse == 1){</span>
+<span class="nc" id="L61">    			modification_quai(quai, new Avion());</span>
+    		}
+    	}
+
+<span class="nc" id="L65">    }</span>
+
+    public void debarquement(Avion avion) {
+<span class="nc" id="L68">        System.out.print(&quot;Debarquement de l'avion &quot;);</span>
+<span class="nc" id="L69">        avion.debarquer();</span>
+<span class="nc" id="L70">    }</span>
+
+    public void modification_quai(Quai quai, Avion avion) {
+<span class="nc bnc" id="L73" title="All 2 branches missed.">        if (avion == null) {</span>
+<span class="nc" id="L74">        	quai.decollage();</span>
+        } else {
+<span class="nc" id="L76">        	quai.atterrissage(avion);</span>
+        }
+<span class="nc" id="L78">    }</span>
+
+    public int menuAero() {
+<span class="nc" id="L81">        System.out.println(&quot;Aeroport&quot;);</span>
+<span class="nc" id="L82">        System.out.println(&quot;1: Acceder aux quais 2: Quit&quot;);</span>
+<span class="nc" id="L83">        return sc.nextInt();</span>
+    }
+
+    public void runTime() {
+<span class="nc" id="L87">        int reponse = 0;</span>
+        do {
+<span class="nc" id="L89">            reponse = menuAero();</span>
+<span class="nc bnc" id="L90" title="All 2 branches missed.">            if (reponse == 1) {</span>
+  
+<span class="nc" id="L92">            	Quai[] list = this.aeroport.getQuais();</span>
+            	do{
+<span class="nc bnc" id="L94" title="All 2 branches missed.">	            	for (int i = 0; i &lt; this.aeroport.getNombreQuais(); i++) {</span>
+<span class="nc" id="L95">	                    System.out.println(i + &quot;:\t&quot; + list[i]);</span>
+	                }
+<span class="nc" id="L97">	            	System.out.println(&quot;Indice du quai ?&quot;);</span>
+<span class="nc" id="L98">	            	reponse = sc.nextInt();</span>
+<span class="nc bnc" id="L99" title="All 4 branches missed.">            	}while(reponse &lt; 0 || reponse &gt;= this.aeroport.getNombreQuais());</span>
+            	
+<span class="nc" id="L101">            	this.etat_Avion(list[reponse], list[reponse].getAvion());</span>
+            }
+<span class="nc bnc" id="L103" title="All 2 branches missed.">        } while (reponse != 2);</span>
+<span class="nc" id="L104">        System.out.println(&quot;Quit&quot;);</span>
+
+<span class="nc" id="L106">    }</span>
+
+    public static void main(String[] args) {
+
+<span class="nc" id="L110">        Aeroport port = new Aeroport();</span>
+
+<span class="nc" id="L112">        GestionnaireAero a = new GestionnaireAero(port);</span>
+        
+<span class="nc" id="L114">        a.runTime();</span>
+<span class="nc" id="L115">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.1.201405082137</span></div></body></html>

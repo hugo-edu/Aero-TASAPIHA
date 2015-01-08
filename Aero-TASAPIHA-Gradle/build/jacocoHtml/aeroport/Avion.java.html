@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Avion.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Aero-TASAPIHA-Gradle</a> &gt; <a href="index.source.html" class="el_package">aeroport</a> &gt; <span class="el_source">Avion.java</span></div><h1>Avion.java</h1><pre class="source lang-java linenums">package aeroport;
+
+import java.util.Arrays;
+
+public class Avion implements GestionAvion {
+    
+    private Aeroport destination;
+    private String marque;
+    private String modele;
+    private int nombrePassagerMax;
+    private int nombrePassager;
+    private Passager[] passagers;
+    
+<span class="fc" id="L14">    public Avion(){</span>
+<span class="fc" id="L15">    	this.destination = new Aeroport();</span>
+<span class="fc" id="L16">    	this.marque = &quot;Airbus&quot;;</span>
+<span class="fc" id="L17">    	this.modele = &quot;A380&quot;;</span>
+<span class="fc" id="L18">    	this.nombrePassagerMax = 50;</span>
+<span class="fc" id="L19">    	this.nombrePassager = 0;</span>
+<span class="fc" id="L20">    	this.passagers = new Passager[nombrePassagerMax];</span>
+<span class="fc" id="L21">    }</span>
+    
+    public Aeroport getDestination() {
+<span class="nc" id="L24">        return this.destination;</span>
+    }
+    
+    public void setDestination(Aeroport destination) {
+<span class="nc" id="L28">        this.destination = destination;</span>
+<span class="nc" id="L29">    }</span>
+    
+    public String getMarque() {
+<span class="fc" id="L32">        return this.marque;</span>
+    }
+    
+    public void setMarque(String marque) {
+<span class="nc" id="L36">        this.marque = marque;</span>
+<span class="nc" id="L37">    }</span>
+    
+    public String getModele() {
+<span class="fc" id="L40">        return this.modele;</span>
+    }
+    
+    public void setModele(String modele) {
+<span class="nc" id="L44">        this.modele = modele;</span>
+<span class="nc" id="L45">    }</span>
+    
+    public int getNombrePassagerMax() {
+<span class="fc" id="L48">		return nombrePassagerMax;</span>
+	}
+
+	public void setNombrePassagerMax(int nombrePassagerMax) {
+<span class="nc" id="L52">		this.nombrePassagerMax = nombrePassagerMax;</span>
+<span class="nc" id="L53">	}</span>
+	
+	public Passager[] getPassagers() {
+<span class="nc" id="L56">        return this.passagers;</span>
+    }
+    
+    public void setPassagers(Passager[] passagers) {
+<span class="nc" id="L60">        this.passagers = passagers;</span>
+<span class="nc" id="L61">    }</span>
+
+	public void embarquer(Passager passager) {
+<span class="nc bnc" id="L64" title="All 2 branches missed.">		if(nombrePassager &lt; nombrePassagerMax){</span>
+<span class="nc" id="L65">			passagers[nombrePassager] = passager;</span>
+<span class="nc" id="L66">			nombrePassager++;</span>
+		}
+<span class="nc" id="L68">    }</span>
+
+    public void debarquer() {
+<span class="nc bnc" id="L71" title="All 2 branches missed.">    	while(nombrePassager &gt; 0){</span>
+<span class="nc" id="L72">    		passagers[nombrePassager] = null;</span>
+<span class="nc" id="L73">    		nombrePassager--;</span>
+    	}
+<span class="nc" id="L75">    	passagers[0] = null;</span>
+<span class="nc" id="L76">    }</span>
+
+	public int getNombrePassager() {
+<span class="fc" id="L79">		return nombrePassager;</span>
+	}
+
+	public void setNombrePassager(int nombrePassager) {
+<span class="nc" id="L83">		this.nombrePassager = nombrePassager;</span>
+<span class="nc" id="L84">	}</span>
+
+	@Override
+	public String toString() {
+<span class="nc" id="L88">		return &quot;Avion [\n destination=&quot; + destination.getNom() + &quot;, \n marque=&quot; + marque</span>
+				+ &quot;, \n modele=&quot; + modele + &quot;, \n nombrePassagerMax=&quot;
+				+ nombrePassagerMax + &quot;, \n nombrePassager=&quot; + nombrePassager
+<span class="nc" id="L91">				+ &quot;, \n passagers=&quot; + Arrays.toString(passagers) + &quot;]&quot;;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.1.201405082137</span></div></body></html>

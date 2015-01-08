@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.0" sequence="0" timestamp="1420746356059" analysisTimestamp="1420746356079" release="">
+  <Project projectName="">
+    <Jar>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\build\classes\main\aeroport\Aeroport.class</Jar>
+    <Jar>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\build\classes\main\aeroport\Avion.class</Jar>
+    <Jar>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\build\classes\main\aeroport\Employe.class</Jar>
+    <Jar>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\build\classes\main\aeroport\GestionAvion.class</Jar>
+    <Jar>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\build\classes\main\aeroport\GestionnaireAero.class</Jar>
+    <Jar>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\build\classes\main\aeroport\GestionQuai.class</Jar>
+    <Jar>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\build\classes\main\aeroport\Passager.class</Jar>
+    <Jar>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\build\classes\main\aeroport\Personne.class</Jar>
+    <Jar>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\build\classes\main\aeroport\Quai.class</Jar>
+    <AuxClasspathEntry>C:\Users\Zukiqx\.gradle\caches\modules-2\files-2.1\commons-collections\commons-collections\3.2\f951934aa5ae5a88d7e6dfaa6d32307d834a88be\commons-collections-3.2.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\src\main\java\aeroport\Aeroport.java</SrcDir>
+    <SrcDir>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\src\main\java\aeroport\Avion.java</SrcDir>
+    <SrcDir>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\src\main\java\aeroport\Employe.java</SrcDir>
+    <SrcDir>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\src\main\java\aeroport\GestionAvion.java</SrcDir>
+    <SrcDir>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\src\main\java\aeroport\GestionnaireAero.java</SrcDir>
+    <SrcDir>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\src\main\java\aeroport\GestionQuai.java</SrcDir>
+    <SrcDir>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\src\main\java\aeroport\Passager.java</SrcDir>
+    <SrcDir>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\src\main\java\aeroport\Personne.java</SrcDir>
+    <SrcDir>C:\Users\Zukiqx\workspace\Aero-TASAPIHA-Gradle\src\main\java\aeroport\Quai.java</SrcDir>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="aeroport.Aeroport">
+      <SourceLine classname="aeroport.Aeroport" start="15" end="94" sourcefile="Aeroport.java" sourcepath="aeroport/Aeroport.java"/>
+    </Class>
+    <Method classname="aeroport.Aeroport" name="getEmployes" signature="()[Laeroport/Employe;" isStatic="false">
+      <SourceLine classname="aeroport.Aeroport" start="74" end="74" startBytecode="0" endBytecode="46" sourcefile="Aeroport.java" sourcepath="aeroport/Aeroport.java"/>
+    </Method>
+    <Field classname="aeroport.Aeroport" name="employes" signature="[Laeroport/Employe;" isStatic="false">
+      <SourceLine classname="aeroport.Aeroport" sourcefile="Aeroport.java" sourcepath="aeroport/Aeroport.java"/>
+    </Field>
+    <SourceLine classname="aeroport.Aeroport" start="74" end="74" startBytecode="4" endBytecode="4" sourcefile="Aeroport.java" sourcepath="aeroport/Aeroport.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="aeroport.Aeroport">
+      <SourceLine classname="aeroport.Aeroport" start="15" end="94" sourcefile="Aeroport.java" sourcepath="aeroport/Aeroport.java"/>
+    </Class>
+    <Method classname="aeroport.Aeroport" name="getQuais" signature="()[Laeroport/Quai;" isStatic="false">
+      <SourceLine classname="aeroport.Aeroport" start="34" end="34" startBytecode="0" endBytecode="46" sourcefile="Aeroport.java" sourcepath="aeroport/Aeroport.java"/>
+    </Method>
+    <Field classname="aeroport.Aeroport" name="quais" signature="[Laeroport/Quai;" isStatic="false">
+      <SourceLine classname="aeroport.Aeroport" sourcefile="Aeroport.java" sourcepath="aeroport/Aeroport.java"/>
+    </Field>
+    <SourceLine classname="aeroport.Aeroport" start="34" end="34" startBytecode="4" endBytecode="4" sourcefile="Aeroport.java" sourcepath="aeroport/Aeroport.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="aeroport.Aeroport">
+      <SourceLine classname="aeroport.Aeroport" start="15" end="94" sourcefile="Aeroport.java" sourcepath="aeroport/Aeroport.java"/>
+    </Class>
+    <Method classname="aeroport.Aeroport" name="setEmployes" signature="([Laeroport/Employe;)V" isStatic="false">
+      <SourceLine classname="aeroport.Aeroport" start="78" end="79" startBytecode="0" endBytecode="61" sourcefile="Aeroport.java" sourcepath="aeroport/Aeroport.java"/>
+    </Method>
+    <Field classname="aeroport.Aeroport" name="employes" signature="[Laeroport/Employe;" isStatic="false">
+      <SourceLine classname="aeroport.Aeroport" sourcefile="Aeroport.java" sourcepath="aeroport/Aeroport.java"/>
+    </Field>
+    <LocalVariable name="employes" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="aeroport.Aeroport" start="78" end="78" startBytecode="2" endBytecode="2" sourcefile="Aeroport.java" sourcepath="aeroport/Aeroport.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="aeroport.Aeroport">
+      <SourceLine classname="aeroport.Aeroport" start="15" end="94" sourcefile="Aeroport.java" sourcepath="aeroport/Aeroport.java"/>
+    </Class>
+    <Method classname="aeroport.Aeroport" name="setQuais" signature="([Laeroport/Quai;)V" isStatic="false">
+      <SourceLine classname="aeroport.Aeroport" start="38" end="39" startBytecode="0" endBytecode="61" sourcefile="Aeroport.java" sourcepath="aeroport/Aeroport.java"/>
+    </Method>
+    <Field classname="aeroport.Aeroport" name="quais" signature="[Laeroport/Quai;" isStatic="false">
+      <SourceLine classname="aeroport.Aeroport" sourcefile="Aeroport.java" sourcepath="aeroport/Aeroport.java"/>
+    </Field>
+    <LocalVariable name="quais" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="aeroport.Aeroport" start="38" end="38" startBytecode="2" endBytecode="2" sourcefile="Aeroport.java" sourcepath="aeroport/Aeroport.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE">
+    <Class classname="aeroport.Avion">
+      <SourceLine classname="aeroport.Avion" start="14" end="91" sourcefile="Avion.java" sourcepath="aeroport/Avion.java"/>
+    </Class>
+    <Method classname="aeroport.Avion" name="getPassagers" signature="()[Laeroport/Passager;" isStatic="false">
+      <SourceLine classname="aeroport.Avion" start="56" end="56" startBytecode="0" endBytecode="46" sourcefile="Avion.java" sourcepath="aeroport/Avion.java"/>
+    </Method>
+    <Field classname="aeroport.Avion" name="passagers" signature="[Laeroport/Passager;" isStatic="false">
+      <SourceLine classname="aeroport.Avion" sourcefile="Avion.java" sourcepath="aeroport/Avion.java"/>
+    </Field>
+    <SourceLine classname="aeroport.Avion" start="56" end="56" startBytecode="4" endBytecode="4" sourcefile="Avion.java" sourcepath="aeroport/Avion.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="aeroport.Avion">
+      <SourceLine classname="aeroport.Avion" start="14" end="91" sourcefile="Avion.java" sourcepath="aeroport/Avion.java"/>
+    </Class>
+    <Method classname="aeroport.Avion" name="setPassagers" signature="([Laeroport/Passager;)V" isStatic="false">
+      <SourceLine classname="aeroport.Avion" start="60" end="61" startBytecode="0" endBytecode="61" sourcefile="Avion.java" sourcepath="aeroport/Avion.java"/>
+    </Method>
+    <Field classname="aeroport.Avion" name="passagers" signature="[Laeroport/Passager;" isStatic="false">
+      <SourceLine classname="aeroport.Avion" sourcefile="Avion.java" sourcepath="aeroport/Avion.java"/>
+    </Field>
+    <LocalVariable name="passagers" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="aeroport.Avion" start="60" end="60" startBytecode="2" endBytecode="2" sourcefile="Avion.java" sourcepath="aeroport/Avion.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N">
+    <Class classname="aeroport.GestionnaireAero">
+      <SourceLine classname="aeroport.GestionnaireAero" start="10" end="115" sourcefile="GestionnaireAero.java" sourcepath="aeroport/GestionnaireAero.java"/>
+    </Class>
+    <Method classname="aeroport.GestionnaireAero" name="&lt;init&gt;" signature="(Laeroport/Aeroport;)V" isStatic="false">
+      <SourceLine classname="aeroport.GestionnaireAero" start="10" end="13" startBytecode="0" endBytecode="87" sourcefile="GestionnaireAero.java" sourcepath="aeroport/GestionnaireAero.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="563" end="564" startBytecode="0" endBytecode="43" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="aeroport.GestionnaireAero" start="12" end="12" startBytecode="17" endBytecode="17" sourcefile="GestionnaireAero.java" sourcepath="aeroport/GestionnaireAero.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" rank="19" abbrev="SF" category="STYLE">
+    <Class classname="aeroport.GestionnaireAero">
+      <SourceLine classname="aeroport.GestionnaireAero" start="10" end="115" sourcefile="GestionnaireAero.java" sourcepath="aeroport/GestionnaireAero.java"/>
+    </Class>
+    <Method classname="aeroport.GestionnaireAero" name="etat_Avion" signature="(Laeroport/Quai;Laeroport/Avion;)V" isStatic="false">
+      <SourceLine classname="aeroport.GestionnaireAero" start="32" end="65" startBytecode="0" endBytecode="425" sourcefile="GestionnaireAero.java" sourcepath="aeroport/GestionnaireAero.java"/>
+    </Method>
+    <SourceLine classname="aeroport.GestionnaireAero" start="43" end="51" startBytecode="129" endBytecode="202" sourcefile="GestionnaireAero.java" sourcepath="aeroport/GestionnaireAero.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Thu, 8 Jan 2015 20:45:56 +0100" total_classes="9" referenced_classes="23" total_bugs="8" total_size="260" num_packages="1" java_version="1.8.0_05" vm_version="25.5-b02" cpu_seconds="1.01" clock_seconds="0.81" peak_mbytes="34.68" alloc_mbytes="247.50" gc_seconds="0.09" priority_2="7" priority_1="1">
+    <PackageStats package="aeroport" total_bugs="8" total_types="9" total_size="260" priority_2="7" priority_1="1">
+      <ClassStats class="aeroport.Aeroport" sourceFile="Aeroport.java" interface="false" size="61" bugs="4" priority_2="4"/>
+      <ClassStats class="aeroport.Avion" sourceFile="Avion.java" interface="false" size="60" bugs="2" priority_2="2"/>
+      <ClassStats class="aeroport.Employe" sourceFile="Employe.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="aeroport.GestionAvion" sourceFile="GestionAvion.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="aeroport.GestionQuai" sourceFile="GestionQuai.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="aeroport.GestionnaireAero" sourceFile="GestionnaireAero.java" interface="false" size="71" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="aeroport.Passager" sourceFile="Passager.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="aeroport.Personne" sourceFile="Personne.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="aeroport.Quai" sourceFile="Quai.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="134" invocations="402" avgMicrosecondsPerInvocation="334" maxMicrosecondsPerInvocation="15232" standardDeviationMircosecondsPerInvocation="981"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="33" invocations="23" avgMicrosecondsPerInvocation="1474" maxMicrosecondsPerInvocation="9094" standardDeviationMircosecondsPerInvocation="2343"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="28" invocations="64" avgMicrosecondsPerInvocation="443" maxMicrosecondsPerInvocation="24930" standardDeviationMircosecondsPerInvocation="3086"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="26" invocations="60" avgMicrosecondsPerInvocation="443" maxMicrosecondsPerInvocation="6859" standardDeviationMircosecondsPerInvocation="1197"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="25" invocations="196" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="3874" standardDeviationMircosecondsPerInvocation="351"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="22" invocations="370" avgMicrosecondsPerInvocation="60" maxMicrosecondsPerInvocation="1913" standardDeviationMircosecondsPerInvocation="132"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="21" invocations="23" avgMicrosecondsPerInvocation="953" maxMicrosecondsPerInvocation="19369" standardDeviationMircosecondsPerInvocation="3929"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="21" invocations="60" avgMicrosecondsPerInvocation="350" maxMicrosecondsPerInvocation="9985" standardDeviationMircosecondsPerInvocation="1291"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="20" invocations="30" avgMicrosecondsPerInvocation="671" maxMicrosecondsPerInvocation="11042" standardDeviationMircosecondsPerInvocation="1997"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="19" invocations="60" avgMicrosecondsPerInvocation="317" maxMicrosecondsPerInvocation="6182" standardDeviationMircosecondsPerInvocation="884"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="17" invocations="60" avgMicrosecondsPerInvocation="283" maxMicrosecondsPerInvocation="2949" standardDeviationMircosecondsPerInvocation="530"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="16" invocations="60" avgMicrosecondsPerInvocation="275" maxMicrosecondsPerInvocation="6905" standardDeviationMircosecondsPerInvocation="889"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="14" invocations="60" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="1430" standardDeviationMircosecondsPerInvocation="331"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="13" invocations="405" avgMicrosecondsPerInvocation="33" maxMicrosecondsPerInvocation="2018" standardDeviationMircosecondsPerInvocation="104"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="11" invocations="23" avgMicrosecondsPerInvocation="520" maxMicrosecondsPerInvocation="2665" standardDeviationMircosecondsPerInvocation="782"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="11" invocations="23" avgMicrosecondsPerInvocation="503" maxMicrosecondsPerInvocation="3581" standardDeviationMircosecondsPerInvocation="825"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="11" invocations="23" avgMicrosecondsPerInvocation="483" maxMicrosecondsPerInvocation="6073" standardDeviationMircosecondsPerInvocation="1230"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
